@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>自制一个"咕咕机"</title>
+    <meta name="description" content="看到diygod和tcdw都入手了咕咕机，觉得官方那个太贵了，想着自制一个好了。 选购一个小票打印机先上了某宝，看了一下小票打印机的价格，发现餐饮用的小票打印机价格便宜的想哭,于是随便选了一个79的，送两打印纸的小票打印机回来了。拿到这个小票打印机，发现一个很严重的问题，就是这个打印机只支持GBK编码（之前做pos打印驱动，都是针对UTF8做开发的，在Python中做GBK开发的经验并不是很多），这算是没有注意看介绍带来的坑把。不过不管了，反正买回来了。">
+    <link rel="shortcut icon" href="https://qwe7002.com/static/user_file/favicon.ico">
+    <link href="//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/casper/css/screen.css">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92266303-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+<div class="nav">
+    <h3 class="nav-title">菜单</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">关闭</span>
+    </a>
+    <ul>
+        <li><a class="nav-" role="presentation" href="/">主页</a></li><li class="nav-" role="presentation"><a
+                    href="/post/about">About Me</a>
+            </li><li class="nav-" role="presentation"><a
+                    href="/post/links">Links</a>
+            </li><li class="nav-" role="presentation"><a
+                    href="/post/you-xi-duo-shou-zhi-nan">游戏剁手指南</a>
+            </li></ul>
+    <a class="subscribe-button icon-feed" href="/rss">订阅</a>
+</div>
+<span class="nav-cover"></span>
+<div class="site-wrapper">
+    <header class="main-header post-head no-cover">
+        <nav class="main-nav clearfix">
+            <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">自制一个"咕咕机"</h1>
+                <section class="post-meta">
+                    <time class="post-date" datetime="2018-03-21">2018-03-21</time>
+                </section>
+            </header>
+
+            <section class="post-content">
+                <p>看到diygod和tcdw都入手了咕咕机，觉得官方那个太贵了，想着自制一个好了。</p>
+
+<h3>选购一个小票打印机</h3>
+
+<p>先上了某宝，看了一下小票打印机的价格，发现餐饮用的小票打印机价格便宜的想哭,于是随便选了一个79的，送两打印纸的小票打印机回来了。</p>
+
+<p>拿到这个小票打印机，发现一个很严重的问题，就是这个打印机只支持GBK编码（之前做pos打印驱动，都是针对UTF-8做开发的，在Python中做GBK开发的经验并不是很多），这算是没有注意看介绍带来的坑把。不过不管了，反正买回来了。</p>
+
+<p>这里说一下小票打印机，POS小票打印机分为热敏和针式两种。
+打印纸的宽度分为58毫米、76毫米和80毫米三种。我这里用的是热敏的款式，宽度是58毫米的。我觉得这个宽度够用了。</p>
+
+<h3>开发驱动</h3>
+
+<p>现在所有市面上的小票打印机，都是支持爱普生的POS协议的，所以我们可以直接找一个爱普生pos协议的库来用。这里我选择了一个开源了很久的仓库来做开发：python-escpos 这个仓库很早之前在 google code 上就有了，目前还是用 python2 开发的，所以说我们需要花上一点时间，把它重写成python3的，因为这样可以更容易的处理文本信息。这个重写工作量其实并不大，我们可以通过 <a href="https://www.zhihu.com/question/19698598/answer/206703788">https://www.zhihu.com/question/19698598/answer/206703788</a> 这个答案来完成绝大多数的工作。</p>
+
+<h3>编写程序</h3>
+
+<p>废话不多说先上我的代码：</p>
+
+<pre><code>#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import usb.core
+import usb.util
+import sys
+from escpos import printer
+
+idVendor= 0x6868
+idProduct= 0x0600
+
+dev =  usb.core.find(idVendor=idVendor,idProduct=idProduct)
+if dev is None:
+    exit()
+cfg = dev.get_active_configuration()
+intf = cfg[(0,0)]
+ep = usb.util.find_descriptor(
+    intf,
+    # match the first OUT endpoint
+    custom_match = \
+    lambda e: \
+    usb.util.endpoint_direction(e.bEndpointAddress) == \
+    usb.util.ENDPOINT_OUT
+)
+dev.reset()
+
+def printmsg(msg):
+    usb = printer.Usb(idVendor,idProduct, 0, out_ep=ep.bEndpointAddress)
+    usb.text(msg)
+    usb.set(align=&quot;center&quot;)
+    usb.close()
+
+</code></pre>
+
+<p>但是，当我开始运行它的时候，问题发生了。经过一堆的检查，我发现是ecspos库中，把文本的编码给写死了。所以我把仓库clone了一份，对其中的编码部分进行了修改。终于完成了整个打印机的接口。接下来的工作，大概就是编写web服务器然后科学的调用了。</p>
+
+<p>以下为测试打印:
+<img src="https://i.loli.net/2018/04/02/5ac2044183038.jpg" alt="IMG_2079.jpg"></p>
+
+            </section>
+
+            <footer class="post-footer">
+
+                <figure class="author-image">
+                    <img class="img" src="https://secure.gravatar.com/avatar/829e35ddb6a7ea0f8f172284efab090f">
+                </figure>
+
+                <section class="author">
+                    <h4><a href="">qwe7002</a></h4>
+                    <p>一直很高调，其实就是个小丑。技术本就渣，还要冒充大牛。什么事情都爱多考虑三分，最后往往发现是想太多。爱好极简，但是做出来的东西往往还是差那么些。对自己的作品超级苛刻，往往最后逼死的是自己。半理工半文艺思维，至今没搞懂这是个什么玩意。一切都是浮云，欢喜就好。</p>
+                </section>
+
+                <div id="disqus_thread">本站使用Disqus评论服务，如果无法显示，请检查您的网络链接</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+   var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+   };
+   */
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://qwe7002.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+
+            </footer>
+
+        </article>
+    </main>
+
+<footer class="site-footer clearfix">
+    <section class="copyright"><a href="/">qwe7002的个人博客</a> &copy; 2018</section>
+    <section class="poweredby">Powered by SilverBlog , Theme By Casper</section>
+</footer>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
+<script type="text/javascript" src="/static/casper/js/index.js"></script>
+<script src="https://cdn.silverblog.org/bplayer/bplayer.min.js"></script>
+<script src="https://cdn.silverblog.org/bplayer/bp_init.js"></script>
+
+</body>
+</html>

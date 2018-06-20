@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Smartwiki - 一个简单的独立页面系统</title>
+    <meta name="description" content="最近忙里偷闲完成了这款简单的wiki 系统，现在发布出来，欢迎各位提出意见。 简介SmartWiki 是一个简单的，基于文件的 CMS 系统。SmartWiki 采用 Markdown 作为编辑语言，无需任何数据库。与同类产品相比，有着更高的性能。只要您拥有1MB 的PHP虚拟主机空间就可以搭建一个 CMS 系统。">
+    <link rel="shortcut icon" href="https://qwe7002.com/static/user_file/favicon.ico">
+    <link href="//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/casper/css/screen.css">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92266303-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+<div class="nav">
+    <h3 class="nav-title">菜单</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">关闭</span>
+    </a>
+    <ul>
+        <li><a class="nav-" role="presentation" href="/">主页</a></li><li class="nav-" role="presentation"><a
+                    href="/post/about">About Me</a>
+            </li><li class="nav-" role="presentation"><a
+                    href="/post/links">Links</a>
+            </li><li class="nav-" role="presentation"><a
+                    href="/post/you-xi-duo-shou-zhi-nan">游戏剁手指南</a>
+            </li></ul>
+    <a class="subscribe-button icon-feed" href="/rss">订阅</a>
+</div>
+<span class="nav-cover"></span>
+<div class="site-wrapper">
+    <header class="main-header post-head no-cover">
+        <nav class="main-nav clearfix">
+            <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Smartwiki - 一个简单的独立页面系统</h1>
+                <section class="post-meta">
+                    <time class="post-date" datetime="2016-03-16">2016-03-16</time>
+                </section>
+            </header>
+
+            <section class="post-content">
+                <p>最近忙里偷闲完成了这款简单的wiki 系统，现在发布出来，欢迎各位提出意见。</p>
+
+<h2>简介</h2>
+
+<p><strong>SmartWiki</strong> 是一个简单的，基于文件的 CMS 系统。SmartWiki 采用 Markdown 作为编辑语言，无需任何数据库。与同类产品相比，有着更高的性能。只要您拥有1MB 的PHP虚拟主机空间就可以搭建一个 CMS 系统。</p>
+
+<h2>注意</h2>
+
+<p>以下信息需要根据需要修改。</p>
+
+<ul>
+<li>您需要更改 <code>config</code> 文件夹下的 <code>config.json</code> 文件，该文件为本程序的配置文件。 <code>Title</code> 为网站标题，<code>FooterInfo</code> 为页脚信息。我们希望您能保留 <code>Powered by SmartWiki.</code> 字样以证明您在自豪的使用 Smartwiki 建立网站。</li>
+</ul>
+
+<pre>
+{
+ "Title":"SmartWiki",
+ "FooterInfo":"&copy; Company 2015"
+}
+</pre>
+
+<ul>
+<li>您可以根据您的需要修改 <code>config</code> 文件夹下的 <code>pages.json</code> 文件，该数组将为程序提供导航信息。其中的 <code>index</code> 为 Markdown 文档文件的文件名。您必须编写一个 <code>index.md</code> 文件作为本网站的首页。</li>
+</ul>
+
+<p>您可以选择使用一个数组来表示一个分类下的子分类。例如：</p>
+
+<pre>
+{
+    "index":"主页",
+    "example":
+    {
+        "Title":"example",
+        "the one":"page1"
+    }
+}
+</pre>
+
+<p>其中的 <code>example</code> 代表这个分类的类名称，所有该分类的Markdown文件需要以 <code>分类名称(example)/子分类名称(page1).md</code>的方式来存放。子分类数组中必须包含一个名为 <code>Title</code> 的键来描述这个分类所要显示的名称。</p>
+
+<ul>
+<li>在 md 文档中，您可以在首个分割线之前定义本页的标题与副标题。例如：</li>
+</ul>
+
+<pre>
+#标题
+副标题
+***
+
+</pre>
+
+<p>您需要将以上代码写在文件的顶部，以便能够正确的解析到这些信息。</p>
+
+<h2>感谢</h2>
+
+<p>感谢优秀的开源 Markdown 库 <code>php-markdown</code> 以及优秀的前端框架 <code>Bootstrap</code>.</p>
+
+<ul>
+<li><a href="https://github.com/michelf/php-markdown">php-markdown</a></li>
+<li><a href="https://github.com/twbs/bootstrap">Bootstrap</a></li>
+<li><a href="https://github.com/allmobilize/amazeui/">amazeui</a></li>
+</ul>
+
+<h2>参与开发</h2>
+
+<p>我们欢迎您在 SmartWiki 项目的 GitHub 上报告 issue 或者 pull request。</p>
+
+<p>如果您还不熟悉GitHub的Fork and Pull开发模式，您可以阅读GitHub的文档（<a href="https://help.github.com/articles/using-pull-requests%EF%BC%89%E8%8E%B7%E5%BE%97%E6%9B%B4%E5%A4%9A%E7%9A%84%E4%BF%A1%E6%81%AF%E3%80%82">https://help.github.com/articles/using-pull-requests）获得更多的信息。</a></p>
+
+<p>如果你想在这里显示您的副本，请联系 Email：<a href="mailto:qwe7002@hotmail.com">qwe7002@hotmail.com</a></p>
+
+<p>感谢 <a href="https://github.com/kunr">@Rakume</a> 同学的优化。</p>
+
+<h2>版权</h2>
+
+<p>采用MIT协议分发</p>
+
+<blockquote>
+<p>Copyright (C) <year> <copyright holders></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</blockquote>
+
+<p>仓库地址：<a href="https://github.com/qwe7002/smartwiki(">https://github.com/qwe7002/smartwiki(</a> bootstrap 版本)</p>
+
+            </section>
+
+            <footer class="post-footer">
+
+                <figure class="author-image">
+                    <img class="img" src="https://secure.gravatar.com/avatar/829e35ddb6a7ea0f8f172284efab090f">
+                </figure>
+
+                <section class="author">
+                    <h4><a href="">qwe7002</a></h4>
+                    <p>一直很高调，其实就是个小丑。技术本就渣，还要冒充大牛。什么事情都爱多考虑三分，最后往往发现是想太多。爱好极简，但是做出来的东西往往还是差那么些。对自己的作品超级苛刻，往往最后逼死的是自己。半理工半文艺思维，至今没搞懂这是个什么玩意。一切都是浮云，欢喜就好。</p>
+                </section>
+
+                <div id="disqus_thread">本站使用Disqus评论服务，如果无法显示，请检查您的网络链接</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+   var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+   };
+   */
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://qwe7002.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+
+            </footer>
+
+        </article>
+    </main>
+
+<footer class="site-footer clearfix">
+    <section class="copyright"><a href="/">qwe7002的个人博客</a> &copy; 2018</section>
+    <section class="poweredby">Powered by SilverBlog , Theme By Casper</section>
+</footer>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
+<script type="text/javascript" src="/static/casper/js/index.js"></script>
+<script src="https://cdn.silverblog.org/bplayer/bplayer.min.js"></script>
+<script src="https://cdn.silverblog.org/bplayer/bp_init.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>如何配置USB2LCD</title>
+    <meta name="description" content="最近心血来潮，看到好多机油在raspiberry pi上驱动lcd1602等等的点阵字符屏幕，心里痒痒的。但是又怕gpio口接不好导致烧板子。权衡利弊，最后就选择了usb2lcd的方案。经过各种哦焦急等待，屏幕终于来了！由于卖家的教程是一个英文教程，相对于各位英文较差的小白而言阅读起来比较辛苦，这里我就花点时间吧配置教程中文化吧">
+    <link rel="shortcut icon" href="https://qwe7002.com/static/user_file/favicon.ico">
+    <link href="//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/casper/css/screen.css">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92266303-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+<div class="nav">
+    <h3 class="nav-title">菜单</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">关闭</span>
+    </a>
+    <ul>
+        <li><a class="nav-" role="presentation" href="/">主页</a></li><li class="nav-" role="presentation"><a
+                    href="/post/about">About Me</a>
+            </li><li class="nav-" role="presentation"><a
+                    href="/post/links">Links</a>
+            </li><li class="nav-" role="presentation"><a
+                    href="/post/you-xi-duo-shou-zhi-nan">游戏剁手指南</a>
+            </li></ul>
+    <a class="subscribe-button icon-feed" href="/rss">订阅</a>
+</div>
+<span class="nav-cover"></span>
+<div class="site-wrapper">
+    <header class="main-header post-head no-cover">
+        <nav class="main-nav clearfix">
+            <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">如何配置USB2LCD</h1>
+                <section class="post-meta">
+                    <time class="post-date" datetime="2015-05-23">2015-05-23</time>
+                </section>
+            </header>
+
+            <section class="post-content">
+                <p>最近心血来潮，看到好多机油在raspiberry pi上驱动lcd1602等等的点阵字符屏幕，心里痒痒的。但是又怕gpio口接不好导致烧板子。权衡利弊，最后就选择了usb2lcd的方案。经过各种哦焦急等待，屏幕终于来了！由于卖家的教程是一个英文教程，相对于各位英文较差的小白而言阅读起来比较辛苦，这里我就花点时间吧配置教程中文化吧
+驱动这个lcd屏幕，我们要安装的就是lcdproc这个软件了，这个软件自带有驱动和程序，只要安装上并且配置好就能够正常的使用。所以我们就先来安装这个程序。输入命令</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get install lcdproc
+</code></pre>
+
+<p>如果你是使用foroda、arch等yum系的系统的话，可以使用</p>
+
+<pre><code>sudo yum update
+sudo yum install lcdproc
+</code></pre>
+
+<p>（注意，如果你用root登录的话，sudo就可以免了）等待安装完毕以后，就是本文的重点，配置文件。
+首先我们先用nano打开配置文档</p>
+
+<pre><code>sudo nano /etc/LCDd.conf
+</code></pre>
+
+<p>然后找到</p>
+
+<pre><code>Driver=curses
+</code></pre>
+
+<p>并且把Driver=curses改为Driver=hd44780</p>
+
+<p>之后就是配置hd44780这个驱动了，找到[hd44780]，然后在这下面一共有如下几项，只要对照着改就可以了。注意最后的按钮设定一定要注意前缀，不然有可能出问题</p>
+
+<pre><code>[hd44780]
+ConnectionType=lcd2usb
+Contrast=850
+Brightness=800
+OffBrightness=0
+Keypad=yes
+Backlight=yes
+Size=16x2
+KeyDirect_1=Enter
+KeyDirect_2=Down
+KeyDirect_3=Escape
+</code></pre>
+
+<p>之后，按ctrl+x，保存配置，然后就大胆的输入reboot重启吧！
+重启过后，插入显示屏并且输入</p>
+
+<pre><code>sudo LCDd
+sudo lcdproc
+</code></pre>
+
+<p>就可以看到效果了。如果想开机启动的话，还可以把这两行命令加到rc.local中实现开机启动！
+外部链接：</p>
+
+<p>LCD2USB project: <a href="http://www.harbaum.org/till/lcd2usb/index.shtml">http://www.harbaum.org/till/lcd2usb/index.shtml</a>
+LCDProc project: <a href="http://www.lcdproc.org">http://www.lcdproc.org</a></p>
+
+            </section>
+
+            <footer class="post-footer">
+
+                <figure class="author-image">
+                    <img class="img" src="https://secure.gravatar.com/avatar/829e35ddb6a7ea0f8f172284efab090f">
+                </figure>
+
+                <section class="author">
+                    <h4><a href="">qwe7002</a></h4>
+                    <p>一直很高调，其实就是个小丑。技术本就渣，还要冒充大牛。什么事情都爱多考虑三分，最后往往发现是想太多。爱好极简，但是做出来的东西往往还是差那么些。对自己的作品超级苛刻，往往最后逼死的是自己。半理工半文艺思维，至今没搞懂这是个什么玩意。一切都是浮云，欢喜就好。</p>
+                </section>
+
+                <div id="disqus_thread">本站使用Disqus评论服务，如果无法显示，请检查您的网络链接</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+   var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+   };
+   */
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://qwe7002.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+
+            </footer>
+
+        </article>
+    </main>
+
+<footer class="site-footer clearfix">
+    <section class="copyright"><a href="/">qwe7002的个人博客</a> &copy; 2018</section>
+    <section class="poweredby">Powered by SilverBlog , Theme By Casper</section>
+</footer>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
+<script type="text/javascript" src="/static/casper/js/index.js"></script>
+<script src="https://cdn.silverblog.org/bplayer/bplayer.min.js"></script>
+<script src="https://cdn.silverblog.org/bplayer/bp_init.js"></script>
+
+</body>
+</html>
