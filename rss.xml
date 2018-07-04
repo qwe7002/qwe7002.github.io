@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>人生に梦があるのではなく、梦が人生をつくるのです。</description><lastBuildDate>Wed, 20 Jun 2018 18:37:14 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>三款手环的测评</title><link>https://qwe7002.com/post/san-kuan-shou-huan-de-ce-ping</link><description><![CDATA[<p>为了解决各种消息收不到，电话接不到的问题（我用入耳耳机，经常会因为塞着耳机而没有注意到有电话打进来）。2018年，我换了三款手环。</p>
+<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>人生に梦があるのではなく、梦が人生をつくるのです。</description><lastBuildDate>Wed, 04 Jul 2018 18:06:43 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>三款手环的测评</title><link>https://qwe7002.com/post/san-kuan-shou-huan-de-ce-ping</link><description><![CDATA[<p>为了解决各种消息收不到，电话接不到的问题（我用入耳耳机，经常会因为塞着耳机而没有注意到有电话打进来）。2018年，我换了三款手环。</p>
 
 <h2>小米手环2</h2>
 
@@ -184,7 +184,7 @@ def printmsg(msg):
 <p>总之庆祝一下吧。</p>
 
 <p><img src="https://i.loli.net/2018/03/19/5aaead30e375c.png" alt="3113CF03-06F2-4925-9E5D-02B7F72B8164.png"></p>
-]]></description><guid isPermaLink="true">https://qwe7002.com/post/wo-de-di-yi-ge-IOS-ying-yong</guid><pubDate>Mon, 19 Mar 2018 02:18:09 GMT</pubDate></item><item><title>网易云音乐:从入门到放弃</title><link>https://qwe7002.com/post/wang-yi-yun-yin-le-cong-ru-men-dao-fang-qi</link><description><![CDATA[<p>已经记不得用了多少年网易云音乐了。</p>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/wo-de-di-yi-ge-IOS-ying-yong</guid><pubDate>Mon, 19 Mar 2018 02:18:09 GMT</pubDate></item><item><title>网易云音乐:从入门到放弃</title><link>https://qwe7002.com/post/wang-yi-yun-yin-le--cong-ru-men-dao-fang-qi</link><description><![CDATA[<p>已经记不得用了多少年网易云音乐了。</p>
 
 <p>第一次用网易云大概是在大一上学期吧，那时候用着iPod touch配合QQ音乐和Itunes听歌（可惜iPod容量不够大，现在来看，如果当时选择的是ipod classic的话，要好不少。不过话说回来，当时并没有非常好的耳机）。还记得那时候QQ音乐的歌曲信息经常不完整，不少歌曲是用soso从其他网站搜索来的。微博上不少人推荐歌曲在用网易云音乐，我也就去试了一下。这一试不要紧，先是被电台功能给吸引了，之后是日推让我每天都能发现好歌，同时相比QQ音乐的信息要整齐的多，也没有发现假无损。于是我就从一个绿钻用户变成了网易云用户。</p>
 
@@ -195,7 +195,7 @@ def printmsg(msg):
 <p>在购买了Sony A45播放器之后，我重新找出了之前的旧唱片，将他们一首首导入到Itunes中，转换成AAC。这应该是一个新的开始。我终究还是告别了国内的音乐产品。毕竟我还是相信那句话，要是真的喜欢的话，就花钱支持他们吧。</p>
 
 <p>在这里纪念一下，陪伴了我整个大学时光的云音乐。</p>
-]]></description><guid isPermaLink="true">https://qwe7002.com/post/wang-yi-yun-yin-le-cong-ru-men-dao-fang-qi</guid><pubDate>Thu, 15 Mar 2018 18:47:53 GMT</pubDate></item><item><title>我的2017总结</title><link>https://qwe7002.com/post/wo-de-2017-zong-jie</link><description><![CDATA[<p>转眼间2017就过去了，这一年，我从大学生的身份转变为了社会人。不知道算不算的上是一个进步吧。</p>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/wang-yi-yun-yin-le--cong-ru-men-dao-fang-qi</guid><pubDate>Thu, 15 Mar 2018 18:47:53 GMT</pubDate></item><item><title>我的2017总结</title><link>https://qwe7002.com/post/wo-de-2017-zong-jie</link><description><![CDATA[<p>转眼间2017就过去了，这一年，我从大学生的身份转变为了社会人。不知道算不算的上是一个进步吧。</p>
 
 <p>今年最大的两件事大概是SmartCMS商用化和Silver Blog的诞生了吧，早在2013我就一直在思考如何写一个小而全的博客系统。当时还在用php+MySQL这对组合。之后也用过了sqllite，但是还是觉得太过于复杂。直到今年SmartCMS诞生的时候，突然发现这玩意不就是半个博客系统么。于是稍加改造，就诞生了silverblog,把用了将近两年的Ghost成功替换掉了。同时还委托老宋开发了Silver Create，以及自己开发的Android管理工具。</p>
 
