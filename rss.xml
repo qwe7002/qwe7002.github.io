@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>人生に梦があるのではなく、梦が人生をつくるのです。</description><lastBuildDate>Fri, 17 Aug 2018 21:46:49 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>和tcdw的厦门之行</title><link>https://qwe7002.com/post/he-tcdw-de-sha-men-zhi-xing</link><description><![CDATA[<p>得知tcdw要来厦门玩，我个人还是挺欣喜的。毕竟是从内蒙古过来的（大老远不容易）。</p>
+<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>人生に梦があるのではなく、梦が人生をつくるのです。</description><lastBuildDate>Wed, 22 Aug 2018 19:47:07 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>和tcdw的厦门之行</title><link>https://qwe7002.com/post/he-tcdw-de-sha-men-zhi-xing</link><description><![CDATA[<p>得知tcdw要来厦门玩，我个人还是挺欣喜的。毕竟是从内蒙古过来的（大老远不容易）。</p>
 
 <p>Tcdw来到厦门就显露出了土豪的气质（中山路高级酒店啊），我们也算是在厦门，把能叫到的人都叫全了，然后进行了一次聚餐。</p>
 
@@ -874,36 +874,42 @@ readfile("img/".$file[$random]); //读取文件
 <p>其次，就是抓紧对一些可行的新事物的开发和研究。个人在语言方面并不喜欢 node，原因很简单，js 我并不觉得这门语言适合用于后端。个人觉得，在中小型开发中，使用PHP和 Python 开发应该会更好一些，PHP 的开发，个人不建议使用 MVC 的开发方式，虽然这种开发方式的确不错，但是根据 PHP 的生命周期等等来看，也许牺牲硬盘 IO 来换内存也许会更合算一些。毕竟在嵌入式平台上，内存可是比硬盘更稀有啊。至于 Python，个人建议是处理一些类似验证码生成，二维码生成等等这些东西。由于 python 相比PHP有着更高的效率，所以用 Python 来做这些需要大量运算的东西而言还是不错的。</p>
 
 <p>实际上扯这么多东西我也不知道干嘛，其实写这篇文字只是想把博客补充一下，毕竟在上个月，原先的博客都没有了，本着负责任的想法还是写一点有的没的东西吧。</p>
-]]></description><guid isPermaLink="true">https://qwe7002.com/post/you-shi-yi-nian-gao-kao-shi</guid><pubDate>Sat, 06 Jun 2015 00:00:00 GMT</pubDate></item><item><title>我在知乎上的一些回答</title><link>https://qwe7002.com/post/wo-zai-zhi-hu-shang-de-yi-xie-hui-da</link><description><![CDATA[<p>以下是我个人觉得自己在知乎上不错的回答。
-<pre>
-Q:为什么会有那么多人热衷于购买kindle这样功能不如手机又没有实体书的质感的东西?
-A:个人认为kindle是介于手机和纸质书之间的东西。选择它原因很简单。
-第一，作为一名上课看书看轻小说看漫画(请不要喷我，作为大专生很多课程真的很无聊，有时间多看看c#高级编程真正比老师在那里扯string是毛好得多)我不可能背着基本厚度达到1000到2000页的书到课堂，那样太吓人了，翻起来也不方便。
-第二，kindle看久之后不会像手机那样眼睛疼，流眼泪
-第三，待机时间相比手机而言更长，可以慢慢看而不用考虑电量问题
-第四，不会被知乎，游戏，微博，qq这类玩意所吸引(很明显的，社交网络足够花掉你所有的时间。)
-宗上，kindle对于我而言还是非常值得的。单反穷三代，kindle富一生
-</pre>
-<pre>
-Q:免费VPN很危险吗?
-A:最好的选择就是自己搭建一个VPN，准确的说公用的VPN都是不安全的。因为加入一个公用的VPN意味着你加入了一个公开的局域网。VPN服务器可以视为是一个被VPN所有者控制的家用路由器。路由器蹭网的攻击方法在VPN是可以一样用的。如果这个局域网中有一名骇客，那么他就有可能通过局域网攻击的方法通过这个公开的虚拟局域网来攻击你。
-</pre>
-<pre>
-Q:怎么看待知乎日报的乞讨行为？
-A:看到faceair这个事我很心寒。
-前几年也有遇到这样的问题
-做了个电台节目的客户端
-里面的电台录音都是用vps，独立服务器（朋友的，不过我租用了一块硬盘，一个月也得150），sae等等支撑起来的。
-当时有在微博上求捐助
-马上收到了很多这样的回复
-「不是免费软件么？怎么开始讨钱了？作者是不是连翔都找不到了？」
-「就这样的服务还好意思要钱？下个录音等半天还只有电脑版？你当我钱多」
-「……」
-说这个并不想表达什么，只是希望大家能明白一点
-任何的互联网服务都是需要钱的。一个网站，软件如果没有广告等等的东西而要运行是不可能的。如果一直运行下去而没有任何捐助，那么这个网站终究还是要关闭，软件也是一样。
-至于这个项目，最终也是免费了。因为不缺钱了。但是对于我而言，依旧是笔根本没必要的开销。作为我，做一个免费的项目其实也好。毕竟这只是一个情怀。和利益，没有关系。
-综上
-</pre></p>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/you-shi-yi-nian-gao-kao-shi</guid><pubDate>Sat, 06 Jun 2015 00:00:00 GMT</pubDate></item><item><title>我在知乎上的一些回答</title><link>https://qwe7002.com/post/wo-zai-zhi-hu-shang-de-yi-xie-hui-da</link><description><![CDATA[<p>以下是我个人觉得自己在知乎上不错的回答。</p>
+
+<p>Q:为什么会有那么多人热衷于购买kindle这样功能不如手机又没有实体书的质感的东西?</p>
+
+<p>A:个人认为kindle是介于手机和纸质书之间的东西。选择它原因很简单。</p>
+
+<p>第一，作为一名上课看书看轻小说看漫画(请不要喷我，作为大专生很多课程真的很无聊，有时间多看看c#高级编程真正比老师在那里扯string是毛好得多)我不可能背着基本厚度达到1000到2000页的书到课堂，那样太吓人了，翻起来也不方便。</p>
+
+<p>第二，kindle看久之后不会像手机那样眼睛疼，流眼泪</p>
+
+<p>第三，待机时间相比手机而言更长，可以慢慢看而不用考虑电量问题</p>
+
+<p>第四，不会被知乎，游戏，微博，qq这类玩意所吸引(很明显的，社交网络足够花掉你所有的时间。)</p>
+
+<p>综上，kindle对于我而言还是非常值得的。单反穷三代，kindle富一生</p>
+
+<p>Q:免费VPN很危险吗?</p>
+
+<p>A:最好的选择就是自己搭建一个VPN，准确的说公用的VPN都是不安全的。因为加入一个公用的VPN意味着你加入了一个公开的局域网。VPN服务器可以视为是一个被VPN所有者控制的家用路由器。路由器蹭网的攻击方法在VPN是可以一样用的。如果这个局域网中有一名骇客，那么他就有可能通过局域网攻击的方法通过这个公开的虚拟局域网来攻击你。</p>
+
+<p>Q:怎么看待知乎日报的乞讨行为？</p>
+
+<p>A:看到faceair这个事我很心寒。</p>
+
+<p>前几年也有遇到这样的问题,做了个电台节目的客户端，里面的电台录音都是用vps独立服务器（朋友的，不过我租用了一块硬盘，一个月也得150），sae等等支撑起来的。当时有在微博上求捐助，马上收到了很多这样的回复:</p>
+
+<p>「不是免费软件么？怎么开始讨钱了？作者是不是连翔都找不到了？」</p>
+
+<p>「就这样的服务还好意思要钱？下个录音等半天还只有电脑版？你当我钱多」</p>
+
+<p>「……」</p>
+
+<p>说这个并不想表达什么，只是希望大家能明白一点</p>
+
+<p>任何的互联网服务都是需要钱的。一个网站，软件如果没有广告等等的东西而要运行是不可能的。如果一直运行下去而没有任何捐助，那么这个网站终究还是要关闭，软件也是一样。
+至于这个项目，最终也是免费了。因为不缺钱了。但是对于我而言，依旧是笔根本没必要的开销。作为我，做一个免费的项目其实也好。毕竟这只是一个情怀。和利益，没有关系。</p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/wo-zai-zhi-hu-shang-de-yi-xie-hui-da</guid><pubDate>Sat, 06 Jun 2015 00:00:00 GMT</pubDate></item><item><title>感谢谷歌</title><link>https://qwe7002.com/post/gan-xie-gu-ge</link><description><![CDATA[<p>这件事情发生在携程被rm -rf的前几天</p>
 
 <p>上周打算为博客的宿主机做一次升级，原先的系统用的是typecho，就用phpmyadmin把博客被备份了。没想到居然遇到了最恐怖的乱码。所有的数据都变成了类似锟斤拷锟斤拷锟斤拷这样的东西（某群群名）。</p>
