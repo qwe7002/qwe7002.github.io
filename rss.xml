@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>人生に梦があるのではなく、梦が人生をつくるのです。</description><lastBuildDate>Sat, 15 Sep 2018 17:02:13 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>和tcdw的厦门之行</title><link>https://qwe7002.com/post/he-tcdw-de-sha-men-zhi-xing</link><description><![CDATA[<p>得知tcdw要来厦门玩，我个人还是挺欣喜的。毕竟是从内蒙古过来的（大老远不容易）。</p>
+<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>一日は貴い一生である。これを空費してはならない。</description><lastBuildDate>Sun, 23 Sep 2018 20:30:07 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>更换IPhone 6s的屏幕</title><link>https://qwe7002.com/post/geng-huan-IPhone-6s-de-ping-mu</link><description><![CDATA[<p>非常不幸的，我的IPhone 6s在某次回家的路上，因为手滑摔碎了。当我看到官网报价1166的时候，我倒吸了一口气，这个价格换屏幕我不如考虑一下买个新的算了。</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba7793940c35.jpg" alt="IMG_4097.jpg"></p>
+
+<p>经过询问，在本地更换基本只有国产屏和后压屏，这两种屏幕显示效果和耐用程度感觉挺不尽人意的，想到之前在福州的寿司同学那边看到有拆机下来的屏幕，就想说能不能也搞一块来，寿司答应了。同时我的home按钮也不是很灵敏，想确认一下touch ID能不能用。就看着<a href="https://www.ifixit.com/Guide/iPhone+6s+Display+Assembly+Replacement/62900">ifixit</a> 的拆机教程，想说拆开看看情况。结果想拆下屏幕的时候发现自己身边并没有吸盘，经过多次查看结构图，我发现屏幕touch id 左侧没有任何排线，于是我拿出了苹果拆修套装(蚊式止血钳，一加卡针，sim卡外框和米家精修螺丝刀)</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba77c0f57a7f.jpg" alt="IMG_4095.jpg"></p>
+
+<p>先用电吹风打转加热一下手机，把卡针从底部的左侧螺丝孔插进去，向上顶起屏幕，再用sim卡的外框插进顶起的缝隙，左右两边划了一圈，屏幕就拆下来了。</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba77c118fd41.jpg" alt="IMG_4096.jpg"></p>
+
+<p>接着按照教程的方式，把屏幕拆下来之后发现，touch id突然好按了，于是测试了一下指纹功能，初步判断touch id是没问题的，于是就等寿司同学联系的屏幕来了。</p>
+
+<p>过了几天，新的屏幕到手了，一看和新的没有什么区别，于是开始按照教程把听筒和传感器组件转移到新的屏幕上</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba77d44c58eb.jpg" alt="IMG_4094.jpg"></p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba77d48dced3.jpg" alt="IMG_4091.jpg"></p>
+
+<p>由于碎的太厉害，在touch id边缘上有不少旧的盖板的玻璃碎屑，由于周围的垫圈很薄，害怕因为暴力移除导致的垫圈碎裂，不得不花时间用电吹风慢慢的加热移除。</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba77d46dad32.jpg" alt="IMG_4092.jpg"></p>
+
+<p>最后安装完成以后，上电监测了一下，没发现什么问题，就贴上防水胶装回去了。这个防水胶是真的需要耐心的活，稍微不小心就贴坏了。期间还发现电池排线盖的螺丝滑牙了，怀疑是上次去apple store换电池导致的。不过好在问题不大，在维修之前我买了一套螺丝，找到相应的装上去就好了。</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba77d4b0ca3b.jpg" alt="IMG_4090.jpg"></p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba77d4d39273.jpg" alt="IMG_4089.jpg"></p>
+
+<p>装好没多久，我就发现了一个严重的问题。光线感应器不工作。原先我怀疑是我在组装的时候没有对好孔位导致的，然而后来经过一通查询，发现IOS11.3之后，私自更换屏幕，哪怕是苹果原装拆机的屏幕，也会出现环境光传感器被禁用的情况。</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba7809449c55.jpg" alt="IMG_4087.jpg"></p>
+
+<p>虽然环境光传感器不是那么的重要，但是没有这个功能还是非常不习惯的，因为没有办法自动调节屏幕亮度了。后来经过了进一步查询，发现苹果在IOS12 beta修复了这个问题，于是我找到了开发者配置文件，把手机升级到了IOS12，终于所有的功能都能正常使用了。</p>
+
+<p><img src="https://i.loli.net/2018/09/23/5ba780926ddab.jpg" alt="IMG_4088.jpg"></p>
+
+<p>算了一下，自己换屏幕，相比找维修店铺更换能节约大约200元左右，同时保证零件没有被更换这些常见伎俩。相比官方维修来说，也更值得，毕竟1166的价格真的是太贵了。</p>
+
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/marine-bloomin/1092375814?i=1092376301&app=music"></iframe>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/geng-huan-IPhone-6s-de-ping-mu</guid><pubDate>Sun, 23 Sep 2018 20:07:43 GMT</pubDate></item><item><title>和tcdw的厦门之行</title><link>https://qwe7002.com/post/he-tcdw-de-sha-men-zhi-xing</link><description><![CDATA[<p>得知tcdw要来厦门玩，我个人还是挺欣喜的。毕竟是从内蒙古过来的（大老远不容易）。</p>
 
 <p>Tcdw来到厦门就显露出了土豪的气质（中山路高级酒店啊），我们也算是在厦门，把能叫到的人都叫全了，然后进行了一次聚餐。</p>
 
