@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>一日は貴い一生である。これを空費してはならない。</description><lastBuildDate>Fri, 05 Apr 2019 04:04:08 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>通关宝可梦日月</title><link>https://qwe7002.com/post/tong-guan-bao-ke-meng-ri-yue</link><description><![CDATA[<p>看了一下，从入手游戏到通关，经历了两年的时间，期间还把旧的3DSXL出了二手。其间我入手了switch，并且买了最新的《精灵宝可梦 去吧皮卡丘》</p>
+<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>一日は貴い一生である。これを空費してはならない。</description><lastBuildDate>Tue, 09 Apr 2019 23:58:06 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>给刷了Lineageos的OnePlus-3T启用中国电信VOLTE</title><link>https://qwe7002.com/post/gei-shua-le-Lineageos-de-OnePlus-3T-qi-yong-zhong-guo-dian-xin-VOLTE</link><description><![CDATA[<p>前段时间有点空余时间，就想着给自己的 OnePlus3T 开个电信 VOLTE。在网上爬文之后发现大家说的几乎都是原生的氧或者氢系统如何去修改 mbn。对于 Lineageos 基本没有看到提及。所以我就写篇文章来说说在刷了 Lineageos 的手机上配置VOLTE和官方系统有什么区别。</p>
+
+<p>基本上的操作是和<a href="https://kn007.net/topics/oneplus-3t-oxygen-os-enable-china-telecom-volte/">kn007</a>大佬的操作差不多的。所以本文就不再重复叙述了。区别如下：</p>
+
+<p>Lineageos 没有 OnePlusLogKit，所以需要通过 adb 进入 9091 模式。命令如下：</p>
+
+<pre><code>adb shell
+su
+setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
+</code></pre>
+
+<p>然后选用的配置文件是<code>Commercial-Two</code>。我这里这个配置文件是能打电话和收短信的。</p>
+
+<p>还有一点要注意的就是接入点设置务必改成<code>CTNET</code>。否则没法正确注册上IMS，这样就会变成没有信号。这个配置文件没有CDMA的配置信息，所以就没有办法用 CDMA 1x 了。</p>
+
+<p>如果没有<code>Commercial-Two</code>这个文件的话，可以在 <a href="https://github.com/BigTopKrazies/vendor_oneplus_oneplus3/tree/9.0/oneplus3/proprietary/etc/firmware/mbn_ota/mcfg_sw">这里</a> 下载<code>mcfg_sw_TMO-Commercial.mbn</code>文件，然后load进去就可以正常使用了。</p>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/gei-shua-le-Lineageos-de-OnePlus-3T-qi-yong-zhong-guo-dian-xin-VOLTE</guid><pubDate>Tue, 09 Apr 2019 00:53:21 GMT</pubDate></item><item><title>通关宝可梦日月</title><link>https://qwe7002.com/post/tong-guan-bao-ke-meng-ri-yue</link><description><![CDATA[<p>看了一下，从入手游戏到通关，经历了两年的时间，期间还把旧的3DSXL出了二手。其间我入手了switch，并且买了最新的《精灵宝可梦 去吧皮卡丘》</p>
 
 <p>首先，要非常感谢为这作中文化作出贡献的各位。没有大家的努力，我可能还要等很久，才能玩上宝可梦（日语苦手，英语稍微好一点，还是想看到中文版本）</p>
 

@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>差生与疯子</title>
-    <meta name="description" content="都说凉宫春日是神作补完这部番，突然发现自己和她异常相似。「好胜心极强，有着唯我独尊、旁若无人的性格。」这种性格，跟我相似极了。无论在高中，还是在大学，同样也是没有朋友的我，是一个差生，也是一个疯子。在别人的眼里，我就是个疯子吧。我并不懂得如何融入班级，更多的，我只是完成任务，完成那些我需要做的事情。在人与人的关系方面，因为太微妙，所以无法理解。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>给刷了Lineageos的OnePlus-3T启用中国电信VOLTE</title>
+    <meta name="description" content="前段时间有点空余时间，就想着给自己的 OnePlus3T 开个电信 VOLTE。在网上爬文之后发现大家说的几乎都是原生的氧或者氢系统如何去修改 mbn。对于 Lineageos 基本没有看到提及。所以我就写篇文章来说说在刷了 Lineageos 的手机上配置VOLTE和官方系统有什么区别。">
     <link rel="shortcut icon" href="https://qwe7002.com/static/user_file/favicon.ico">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="">
@@ -48,38 +48,29 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">差生与疯子</h1>
+                <h1 class="post-title">给刷了Lineageos的OnePlus-3T启用中国电信VOLTE</h1>
                 <section class="post-meta">
-                    <time class="post-date" datetime="2015-06-07">2015-06-07</time>
+                    <time class="post-date" datetime="2019-04-09">2019-04-09</time>
                 </section>
             </header>
 
             <section class="post-content">
-                <p>都说凉宫春日是神作</p>
+                <p>前段时间有点空余时间，就想着给自己的 OnePlus3T 开个电信 VOLTE。在网上爬文之后发现大家说的几乎都是原生的氧或者氢系统如何去修改 mbn。对于 Lineageos 基本没有看到提及。所以我就写篇文章来说说在刷了 Lineageos 的手机上配置VOLTE和官方系统有什么区别。</p>
 
-<p>补完这部番，突然发现自己和她异常相似。</p>
+<p>基本上的操作是和<a href="https://kn007.net/topics/oneplus-3t-oxygen-os-enable-china-telecom-volte/">kn007</a>大佬的操作差不多的。所以本文就不再重复叙述了。区别如下：</p>
 
-<p>「好胜心极强，有着唯我独尊、旁若无人的性格。」这种性格，跟我相似极了。</p>
+<p>Lineageos 没有 OnePlusLogKit，所以需要通过 adb 进入 9091 模式。命令如下：</p>
 
-<p>无论在高中，还是在大学，同样也是没有朋友的我，是一个差生，也是一个疯子。</p>
+<pre><code>adb shell
+su
+setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
+</code></pre>
 
-<p>在别人的眼里，我就是个疯子吧。</p>
+<p>然后选用的配置文件是<code>Commercial-Two</code>。我这里这个配置文件是能打电话和收短信的。</p>
 
-<p>我并不懂得如何融入班级，更多的，我只是完成任务，完成那些我需要做的事情。在人与人的关系方面，因为太微妙，所以无法理解。</p>
+<p>还有一点要注意的就是接入点设置务必改成<code>CTNET</code>。否则没法正确注册上IMS，这样就会变成没有信号。这个配置文件没有CDMA的配置信息，所以就没有办法用 CDMA 1x 了。</p>
 
-<p>也许，几年前迈入程序员的行列的时候，思维就已经机械化了吧。</p>
-
-<p>不知道为什么，突然会出现厌世的心理，也许是太早接触这个黑暗的社会了吧。谁知道呢？</p>
-
-<p>人的一生，到底在追求什么？</p>
-
-<p>除了生存，还能有什么？</p>
-
-<p>我不知道，我不知道，我不知道，我不知道</p>
-
-<p>因为我只是个疯子，我只有做好我该做的事情的能力。</p>
-
-<p>2015-06-07</p>
+<p>如果没有<code>Commercial-Two</code>这个文件的话，可以在 <a href="https://github.com/BigTopKrazies/vendor_oneplus_oneplus3/tree/9.0/oneplus3/proprietary/etc/firmware/mbn_ota/mcfg_sw">这里</a> 下载<code>mcfg_sw_TMO-Commercial.mbn</code>文件，然后load进去就可以正常使用了。</p>
 
             </section>
 
