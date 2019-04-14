@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>一日は貴い一生である。これを空費してはならない。</description><lastBuildDate>Tue, 09 Apr 2019 23:58:06 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>给刷了Lineageos的OnePlus-3T启用中国电信VOLTE</title><link>https://qwe7002.com/post/gei-shua-le-Lineageos-de-OnePlus-3T-qi-yong-zhong-guo-dian-xin-VOLTE</link><description><![CDATA[<p>前段时间有点空余时间，就想着给自己的 OnePlus3T 开个电信 VOLTE。在网上爬文之后发现大家说的几乎都是原生的氧或者氢系统如何去修改 mbn。对于 Lineageos 基本没有看到提及。所以我就写篇文章来说说在刷了 Lineageos 的手机上配置VOLTE和官方系统有什么区别。</p>
+<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>一日は貴い一生である。これを空費してはならない。</description><lastBuildDate>Sat, 13 Apr 2019 19:16:15 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>我的2018年终总结</title><link>https://qwe7002.com/post/wo-de-2018-nian-zhong-zong-jie</link><description><![CDATA[<p>一直没有想好这个文章要写点什么，所以就一直搁置了直到4月。</p>
+
+<h2>2018让我更懂得什么是友谊，认清周围的人。</h2>
+
+<p>2018年谈了两次失败的恋爱，对这个感觉没什么好说，毕竟双方都有过错。那互相原谅就好了。</p>
+
+<p>有时候需要更多的对对方进行了解，才能知道是不是适合的那个人。也许你觉得很喜欢的人，跟你并不是一个世界的人。</p>
+
+<h2>2018让我知道了友情的珍贵</h2>
+
+<p>从母亲被查出甲状腺结节开始，我就一直很提心吊胆这个问题。怎么说呢，也许只有失去才会让人觉得拥有是多么的美好。珍惜自己的父母，珍惜每一个亲人，珍惜你的所有。</p>
+
+<h2>2018做了不少有趣的开发</h2>
+
+<p>2018进行了一次SilverBlog的更新，主要是提升了整个项目的安全性，包括换掉不安全的md5算法等等。可以说当年设计的时候还是太Navie，很多问题并没有考虑清楚就直接用了。</p>
+
+<p>2018开发了一个新的项目：Telegram-sms 这个项目是我一直想做的。在我大学期间，我经常会因为忘记带手机而漏接电话，收不到短信这些事情。这个项目实现了类似IOS中Imessage的作用，可以把手机和桌面连在一起。我个人还是蛮开心的。</p>
+
+<h2>结语</h2>
+
+<p>这篇年终总结迟到了很久，2018已经就此结束，2019从此开始。说什么都不如做的好，还是看今朝吧。</p>
+
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%A5%BD%E5%9C%92/571890970?i=571890979"></iframe>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/wo-de-2018-nian-zhong-zong-jie</guid><pubDate>Sat, 13 Apr 2019 19:16:15 GMT</pubDate></item><item><title>给刷了Lineageos的OnePlus-3T启用中国电信VOLTE</title><link>https://qwe7002.com/post/gei-shua-le-Lineageos-de-OnePlus-3T-qi-yong-zhong-guo-dian-xin-VOLTE</link><description><![CDATA[<p>前段时间有点空余时间，就想着给自己的 OnePlus3T 开个电信 VOLTE。在网上爬文之后发现大家说的几乎都是原生的氧或者氢系统如何去修改 mbn。对于 Lineageos 基本没有看到提及。所以我就写篇文章来说说在刷了 Lineageos 的手机上配置VOLTE和官方系统有什么区别。</p>
 
 <p>基本上的操作是和<a href="https://kn007.net/topics/oneplus-3t-oxygen-os-enable-china-telecom-volte/">kn007</a>大佬的操作差不多的。所以本文就不再重复叙述了。区别如下：</p>
 
