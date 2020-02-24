@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>一日は貴い一生である。これを空費してはならない。</description><lastBuildDate>Mon, 29 Apr 2019 23:11:50 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://github.com/SilverBlogTeam</docs><item><title>我的2018年终总结</title><link>https://qwe7002.com/post/wo-de-2018-nian-zhong-zong-jie</link><description><![CDATA[<p>一直没有想好这个文章要写点什么，所以就一直搁置了直到4月。</p>
+<rss version="2.0"><channel><title>qwe7002的个人博客</title><link>https://qwe7002.com</link><description>一日は貴い一生である。これを空費してはならない。</description><lastBuildDate>Mon, 17 Feb 2020 20:52:41 GMT</lastBuildDate><generator>SilverBlog</generator><docs>https://silverblog.org</docs><item><title>开源软件设计一点感想</title><link>https://qwe7002.com/post/kai-yuan-ruan-jian-she-ji-yi-dian-gan-xiang</link><description><![CDATA[<p>很久没更新博客了，打算来写一篇。写了一年多的 Telegram SMS ，收到了挺多的 Issue 我觉得还是总结一下自己的心得比较好。</p>
+
+<h2>任何做好单元测试和全面覆盖的人工测试</h2>
+
+<p>从经验来看，单元测试是非常重要的，一个程序要能够稳健的发展离不开单元测试。测试的用例我个人是比较偏向于复杂而极端的，毕竟不少错误都是因为一些极端情况没有被处理导致的，但也不要过分依赖单元测试，人工测试在每个候选版本发行前就应该开始，单元测试更多的处理一些常见的逻辑错误，以及在一些错误发生时能否正常继续工作下去。而人工测试更注重UI的体验，正常使用下功能的状态，以及整体性的体验。</p>
+
+<h2>不随意添加任何功能</h2>
+
+<p>我个人认为这个问题算是挺常见的一项，有很多功能看起来很实用，但其实随意加入项目主线，之后又疏于维护，就会导致这个功能烂尾。我个人认为与其提供不好用的功能不如不提供这个功能，毕竟很多时候我们其实也不需要那么多的功能，让项目简单一些，粗暴一些会比较好。我经常会在issue里收到不少个人需求的建议，我觉得这些建议对于个人来说是一个不错的想法。但这些功能不应该被加入项目主线，加入项目主线的应该是普适性的功能，如果需要一些私人的定制功能，我觉得开一个分支项目来处理会比较合理一些。很多项目会很快的加入某个不是很明确目的的功能，我认为这个是很不可取的，因为这样会使得这个功能进入进退两难的境地，一方面要面对需要这个功能的用户，但由于设计接口，开发瓶颈。不能很好的实现</p>
+
+<h2>不随意默认启动任何功能</h2>
+
+<p>这个观点也是和上面的相关，事实证明，随意让功能默认开启可能招致用户的反感。但有一种功能我认为是例外。就是对安全性有提升的功能，这些功能的默认开启有助于保护用户的隐私，但要注意在安全的网络环境下，应该让用户无感升级。</p>
+
+<h2>善于做减法</h2>
+
+<p>这个点我觉得算是挺多开源项目的问题吧，在同个项目中会存在一些功能相似的功能，或者提供了不少的选择给用户来选择。我个人觉得这种做法虽然提高了软件的可扩展性，但带来了接口维护的碎片化，以及用户可能没有办法在一堆选项中找到最佳实践。虽然说不少开源软件是自由的，但在于这方面设计来说，我觉得与其提供多个类似的功能，以及多种的选择，其实不如提供一个最佳实践来的好，虽然这样显得没有那么自由，有可选性。但一方面减少了开发维护的难度，另一方面也减少了用户的学习成本。同时，我认为减少一些不必要的功能，也能带来更好的体验。例如博客文章的分类功能，由于这个分类很难成一个标准。用户在写的时候需要考虑要放进什么分类，而读者在阅读的过程很大情况下都是从搜索引擎进来的，他们很可能直接进入某一篇文章，或者在首页从头看到尾。所以相对来说分类不是很重要，反而可能给使用带来麻烦。</p>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/kai-yuan-ruan-jian-she-ji-yi-dian-gan-xiang</guid><pubDate>Wed, 11 Dec 2019 01:31:52 GMT</pubDate></item><item><title>折腾国行Sony WI-1000x刷机</title><link>https://qwe7002.com/post/zhe-teng-guo-xing-Sony-WI-1000x-shua-ji</link><description><![CDATA[<p>原来的EX750BT由于时间问题，已经出现电池续航不足的问题了。乘着618耍猴，以定金100，1299尾款的价格（据说历史最低价只有1299，不过想了一下反正我也买不到，算了)买了一个Wi-1000X。</p>
+
+<p>在618当天，我支付尾款后的下午，耳机就送到了。可以说这个预购的体验还算不错，至少我不用饱受618这样活动的快递问题。</p>
+
+<p><img src="https://static.reallct.com/2019/06/21/5d0cb9f53713232905.jpeg" alt=""></p>
+
+<p><img src="https://static.reallct.com/2019/06/21/5d0cb9fb56ebc50209.jpeg" alt=""></p>
+
+<p>整个机子的质感给我一种还不错的感觉，直到我带上它，按了一下开机键……</p>
+
+<p>Emmmmmm 这个中文语音提示，怎么感觉和华强北60元的那种蓝牙音箱的差不多……而且内置的这个腾讯小薇是什么鬼……我怎么记得是Google Assitant……我这个手机用的是英国区的账户啊……为啥我之前的Ex750BT就是英文的呢……</p>
+
+<p><img src="https://static.reallct.com/2019/06/21/5d0cba008062c27148.jpeg" alt=""></p>
+
+<p>经过一通查找，在网上发现了原因，是因为国行的固件和国际版的固件不同。但我们直到wi-1000x这个耳机应该是硬件一致，唯一的区别就是固件不同。于是我就在网上找有没有什么能够通过强刷固件的方法来实现国际版固件。</p>
+
+<p>功夫不负有心人，在<a href="https://blog.lvwind.com/upgrade-sony-wi-1000x-china-ver/">LvWind Blog</a>找到了一个解决方法，于是我拿出我开发用的Pixel进行安装……然而
+<img src="https://static.reallct.com/2019/06/21/5d0cb9f98270647749.jpeg" alt=""></p>
+
+<p>看起来应该是我的耳机出厂固件太新了，这个老版本的客户端已经不适用了。于是再次寻找。最后通过Google的快照功能找到了一个能用的版本。<a href="http://webcache.googleusercontent.com/search?q=cache:VqbGuMxtUKIJ:dq.tieba.com/p/6043650116+&amp;cd=2&amp;hl=en">理论上可以强刷所有耳机固件的Sony Headphone Connect</a></p>
+
+<p>原文:</p>
+
+<pre><code>
+之前发过一次 WI-1000X强制升级固件的
+
+http://tieba.baidu.com/p/5845777671
+前几天国行更新了, 所以终于有办法刷回国行固件
+
+至于风险原帖已经写的很明白了
+
+本人不对因使用此软件造成的任何损失负责, 使用前请确保为正品行货, 做好需要保修的心理准备
+
+链接: https://pan.baidu.com/s/1exABeJEVhbz4qc24CkSPcg 提取码: sony
+
+其中mdr_0.apk为强制修改serviceID最后一位为0(国际版), mdr_1.apk为1(日本版), mdr_2.apk为2(国行版)
+
+所有apk均为强制更新, 也就是即使更新完再次打开也会提示更新, 所以强刷后请卸载重新安装官方版本
+
+PS: 有人保留了旧版固件的话请联系我, 目前有兴趣研究强刷旧版固件
+
+</code></pre>
+
+<p><img src="https://static.reallct.com/2019/06/21/5d0cb9fe1b01581974.jpeg" alt=""></p>
+
+<p>强刷之后，熟悉的英语提示回来了，极度舒适，同时检查了一下，没有任何功能问题。非常开心。
+<img src="https://static.reallct.com/2019/06/21/5d0cb9fc5420737546.jpeg" alt=""></p>
+
+<p>也可以用Google Assitant了，非常感谢这位<code>lzbdzr</code>提供的工具。</p>
+
+<iframe src="https://open.spotify.com/embed/track/6538a9sxH1VD2g7kJzo7bd" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/zhe-teng-guo-xing-Sony-WI-1000x-shua-ji</guid><pubDate>Fri, 21 Jun 2019 19:23:07 GMT</pubDate></item><item><title>我的2018年终总结</title><link>https://qwe7002.com/post/wo-de-2018-nian-zhong-zong-jie</link><description><![CDATA[<p>一直没有想好这个文章要写点什么，所以就一直搁置了直到4月。</p>
 
 <h2>2018让我更懂得什么是友谊，认清周围的人。</h2>
 
@@ -37,7 +105,7 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 
 <p>还有一点要注意的就是接入点设置务必改成<code>CTNET</code>。否则没法正确注册上IMS，这样就会变成没有信号。这个配置文件没有CDMA的配置信息，所以就没有办法用 CDMA 1x 了。</p>
 
-<p>如果没有<code>Commercial-Two</code>这个文件的话，可以在 <a href="https://github.com/BigTopKrazies/vendor_oneplus_oneplus3/tree/9.0/oneplus3/proprietary/etc/firmware/mbn_ota/mcfg_sw">这里</a> 下载<code>mcfg_sw_TMO-Commercial.mbn</code>文件，然后load进去就可以正常使用了。</p>
+<p>如果没有<code>Commercial-Two</code>这个文件的话，可以在 <a href="https://github.com/nvertigo/proprietary_vendor_oneplus/blob/pie-blobs/oneplus3/proprietary/etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_CT_OpenMkt-Commercial.mbn">这里</a> 下载<code>mcfg_sw_TMO-Commercial.mbn</code>文件，然后load进去就可以正常使用了。</p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/gei-shua-le-Lineageos-de-OnePlus-3T-qi-yong-zhong-guo-dian-xin-VOLTE</guid><pubDate>Tue, 09 Apr 2019 00:53:21 GMT</pubDate></item><item><title>通关宝可梦日月</title><link>https://qwe7002.com/post/tong-guan-bao-ke-meng-ri-yue</link><description><![CDATA[<p>看了一下，从入手游戏到通关，经历了两年的时间，期间还把旧的3DSXL出了二手。其间我入手了switch，并且买了最新的《精灵宝可梦 去吧皮卡丘》</p>
 
 <p>首先，要非常感谢为这作中文化作出贡献的各位。没有大家的努力，我可能还要等很久，才能玩上宝可梦（日语苦手，英语稍微好一点，还是想看到中文版本）</p>
@@ -67,7 +135,7 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 
 <p>翻了一下群的记录，他最后一次发言:</p>
 
-<p><img src="https://static.reallct.com/2018/12/29/5c2675e395b45.jpg" alt="IMG_0994.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/12/29/5c2675e395b45.jpg" alt="IMG_0994.jpg"></p>
 
 <p>在当时，我并没理解这些话有什么意思，我甚至以为他只是单纯的想想罢了。但我在看过新闻之后，我才发现，原来他是这么的寂寞。</p>
 
@@ -81,15 +149,15 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/mei-you-ren-zhi-dao-ta-de-tong-ku-ta-jiu-zhe-me-yong-yuan-de-li-kai-le</guid><pubDate>Sat, 29 Dec 2018 03:33:09 GMT</pubDate></item><item><title>第二次更换Macbook的显示屏</title><link>https://qwe7002.com/post/di-er-ci-geng-huan-Macbook-de-xian-shi-ping</link><description><![CDATA[<p>时过几个月，我的macbook屏幕又出现了新问题，开发机和文书机都出现了屏幕蓝色斑点的现象。由于这些蓝色斑点很影响视觉，所以花了一些时间，把两台笔记本的屏幕都换新了。</p>
 
 <p>这是开发机的图片，照片看不怎么出来，不过如果实际看的话，会发现左右两边会有两条黄色的色带一样的东西，推测是因为放在包里编译东西高温导致的。
-<img src="https://static.reallct.com/2018/12/24/5c20f04d1ac51.jpg" alt="camphoto_342241519.jpg" loading="lazy"></p>
+<img src="https://static.reallct.com/2018/12/24/5c20f04d1ac51.jpg" alt="camphoto_342241519.jpg"></p>
 
 <p>这个是文书机的，可以看到很明显的蓝斑</p>
 
-<p><img src="https://static.reallct.com/2018/12/24/5c20f05240a0d.jpg" alt="camphoto_838545539.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/12/24/5c20f05240a0d.jpg" alt="camphoto_838545539.jpg"></p>
 
 <p>这个问题我在网上搜索了一下，发现好像算是通病了。不过既然愿意帮忙更换，那还是换掉舒服一点。同时文书机的键盘也不太好用了。</p>
 
-<p><img src="https://static.reallct.com/2018/12/24/5c20f051e3dfc.jpg" alt="camphoto_351212254.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/12/24/5c20f051e3dfc.jpg" alt="camphoto_351212254.jpg"></p>
 
 <p>取回的文书机，除了底部D面，几乎是被换了一个新的。</p>
 
@@ -98,41 +166,41 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 <iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/merry-christmas-mr-lawrence/27047083?i=27047055&app=music" height="150" frameborder="0"></iframe>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/di-er-ci-geng-huan-Macbook-de-xian-shi-ping</guid><pubDate>Mon, 24 Dec 2018 22:52:35 GMT</pubDate></item><item><title>更换IPhone 6s的屏幕</title><link>https://qwe7002.com/post/geng-huan-IPhone-6s-de-ping-mu</link><description><![CDATA[<p>非常不幸的，我的IPhone 6s在某次回家的路上，因为手滑摔碎了。当我看到官网报价1166的时候，我倒吸了一口气，这个价格换屏幕我不如考虑一下买个新的算了。</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba7793940c35.jpg" alt="IMG_4097.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba7793940c35.jpg" alt="IMG_4097.jpg"></p>
 
 <p>经过询问，在本地更换基本只有国产屏和后压屏，这两种屏幕显示效果和耐用程度感觉挺不尽人意的，想到之前在福州的寿司同学那边看到有拆机下来的屏幕，就想说能不能也搞一块来，寿司答应了。同时我的home按钮也不是很灵敏，想确认一下touch ID能不能用。就看着<a href="https://www.ifixit.com/Guide/iPhone+6s+Display+Assembly+Replacement/62900">ifixit</a> 的拆机教程，想说拆开看看情况。结果想拆下屏幕的时候发现自己身边并没有吸盘，经过多次查看结构图，我发现屏幕touch id 左侧没有任何排线，于是我拿出了苹果拆修套装(蚊式止血钳，一加卡针，sim卡外框和米家精修螺丝刀)</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba77c0f57a7f.jpg" alt="IMG_4095.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba77c0f57a7f.jpg" alt="IMG_4095.jpg"></p>
 
 <p>先用电吹风打转加热一下手机，把卡针从底部的左侧螺丝孔插进去，向上顶起屏幕，再用sim卡的外框插进顶起的缝隙，左右两边划了一圈，屏幕就拆下来了。</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba77c118fd41.jpg" alt="IMG_4096.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba77c118fd41.jpg" alt="IMG_4096.jpg"></p>
 
 <p>接着按照教程的方式，把屏幕拆下来之后发现，touch id突然好按了，于是测试了一下指纹功能，初步判断touch id是没问题的，于是就等寿司同学联系的屏幕来了。</p>
 
 <p>过了几天，新的屏幕到手了，一看和新的没有什么区别，于是开始按照教程把听筒和传感器组件转移到新的屏幕上</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba77d44c58eb.jpg" alt="IMG_4094.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba77d44c58eb.jpg" alt="IMG_4094.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba77d48dced3.jpg" alt="IMG_4091.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba77d48dced3.jpg" alt="IMG_4091.jpg"></p>
 
 <p>由于碎的太厉害，在touch id边缘上有不少旧的盖板的玻璃碎屑，由于周围的垫圈很薄，害怕因为暴力移除导致的垫圈碎裂，不得不花时间用电吹风慢慢的加热移除。</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba77d46dad32.jpg" alt="IMG_4092.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba77d46dad32.jpg" alt="IMG_4092.jpg"></p>
 
 <p>最后安装完成以后，上电监测了一下，没发现什么问题，就贴上防水胶装回去了。这个防水胶是真的需要耐心的活，稍微不小心就贴坏了。期间还发现电池排线盖的螺丝滑牙了，怀疑是上次去apple store换电池导致的。不过好在问题不大，在维修之前我买了一套螺丝，找到相应的装上去就好了。</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba77d4b0ca3b.jpg" alt="IMG_4090.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba77d4b0ca3b.jpg" alt="IMG_4090.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba77d4d39273.jpg" alt="IMG_4089.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba77d4d39273.jpg" alt="IMG_4089.jpg"></p>
 
 <p>装好没多久，我就发现了一个严重的问题。光线感应器不工作。原先我怀疑是我在组装的时候没有对好孔位导致的，然而后来经过一通查询，发现IOS11.3之后，私自更换屏幕，哪怕是苹果原装拆机的屏幕，也会出现环境光传感器被禁用的情况。</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba7809449c55.jpg" alt="IMG_4087.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba7809449c55.jpg" alt="IMG_4087.jpg"></p>
 
 <p>虽然环境光传感器不是那么的重要，但是没有这个功能还是非常不习惯的，因为没有办法自动调节屏幕亮度了。后来经过了进一步查询，发现苹果在IOS12 beta修复了这个问题，于是我找到了开发者配置文件，把手机升级到了IOS12，终于所有的功能都能正常使用了。</p>
 
-<p><img src="https://static.reallct.com/2018/09/23/5ba780926ddab.jpg" alt="IMG_4088.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/09/23/5ba780926ddab.jpg" alt="IMG_4088.jpg"></p>
 
 <p>算了一下，自己换屏幕，相比找维修店铺更换能节约大约200元左右，同时保证零件没有被更换这些常见伎俩。相比官方维修来说，也更值得，毕竟1166的价格真的是太贵了。</p>
 
@@ -145,11 +213,11 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 
 <p>总之挺开心的。</p>
 
-<p><img src="https://static.reallct.com/2018/07/29/5b5d34244e295.jpg" alt="IMG_3395.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/07/29/5b5d34244e295.jpg" alt="IMG_3395.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/07/29/5b5d351fc9954.jpg" alt="IMG_3394.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/07/29/5b5d351fc9954.jpg" alt="IMG_3394.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/07/29/5b5d367b5e18c.jpg" alt="IMG_0058.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/07/29/5b5d367b5e18c.jpg" alt="IMG_0058.jpg"></p>
 
 <iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/%E8%85%90%E8%8D%89%E4%B8%BA%E8%90%A4/1340827077?i=1340827647&app=music" height="150" frameborder="0"></iframe>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/he-tcdw-de-sha-men-zhi-xing</guid><pubDate>Sun, 29 Jul 2018 11:42:32 GMT</pubDate></item><item><title>三款手环的测评</title><link>https://qwe7002.com/post/san-kuan-shou-huan-de-ce-ping</link><description><![CDATA[<p>为了解决各种消息收不到，电话接不到的问题（我用入耳耳机，经常会因为塞着耳机而没有注意到有电话打进来）。2018年，我换了三款手环。</p>
@@ -208,7 +276,7 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 
 <p>离开apple store的路上，收到了一封邮件，上面的金额把我吓了一跳。</p>
 
-<p><img src="https://static.reallct.com/2018/04/21/5adb584678dad.jpg" alt="IMG_2390.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/21/5adb584678dad.jpg" alt="IMG_2390.jpg"></p>
 
 <p>恩，我好像看到我的top case被更换了，这是不是意味着我的键盘也被换掉了?一切还是等到拿到更换好屏幕的电脑之后，才能揭晓了。</p>
 
@@ -216,24 +284,24 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 
 <p>2018年04月25日，我拿到了修好的笔记本电脑。恩，可以说是我已经认不得它了。屏幕和键盘的整个面都被换掉了，除了之前的底盖上的磨损，可以说和新的没有什么区别了。电池和屏幕从两台对比来看，应该是2017款macbook pro的了（那是一台2016款的macbook pro）电池更大，屏幕色彩更鲜艳了。总之几次体验下来，还是对直营店很满意的。</p>
 
-<p><img src="https://static.reallct.com/2018/04/25/5ae01a9c46af9.jpg" alt="camphoto_2022861571.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/25/5ae01a9c46af9.jpg" alt="camphoto_2022861571.jpg"></p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/geng-huan-Macbook-Pro-de-ping-mu</guid><pubDate>Sat, 21 Apr 2018 23:27:34 GMT</pubDate></item><item><title>从一个背夹电池说起</title><link>https://qwe7002.com/post/cong-yi-ge-bei-jia-dian-chi-shuo-qi</link><description><![CDATA[<p>不管怎么说，iPhone 的电池的确是越来越不耐用了。之前看过一些背夹电池，感觉这玩意可能可以改变我手机一天两充的问题。看了一下色魔张大妈，就上京东买了一个。</p>
 
-<p><img src="https://static.reallct.com/2018/04/14/5ad15fc6261b9.png" alt="IMG_2326.png" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/14/5ad15fc6261b9.png" alt="IMG_2326.png"></p>
 
-<p><img src="https://static.reallct.com/2018/04/14/5ad159a2c068f.jpg" alt="IMG_0105.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/14/5ad159a2c068f.jpg" alt="IMG_0105.jpg"></p>
 
 <p>就是这么个玩意，拿到它的时候，我感到了十分失望，这个东西就好比把个18650充电宝装在你的手机后面，非常的重(算了一下大概300G-500G)同时有严重的发热问题。同时装上之后，手机就无法进行调试了。这对于一个要写应用的人来说还是挺残酷的，毕竟MAC上的模拟器并不能模拟在ARM下的运行。</p>
 
 <p>后来搜索了一下，发现目前有MFI的背夹电池其实并不多，大概也就那么几家。思前想后，决定购买了Mophie的。</p>
 
-<p><img src="https://static.reallct.com/2018/04/14/5ad15b36cf296.jpg" alt="IMG_2283.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/14/5ad15b36cf296.jpg" alt="IMG_2283.jpg"></p>
 
 <p>可以说这个背夹电池无论是重量，还是手感都比之前那个要好太多，唯一的缺点就是背后容易有划痕，不过这也是低价的比较好的方案了吧大概。毕竟官方的背夹电池可是要800多元的。充电的时候也不会再出现发热的情况，最重要的是我可以用MicroUSB进行调试了(顺带省了一条官方数据线)。</p>
 
-<p><img src="https://static.reallct.com/2018/04/14/5ad15c9e09d58.jpg" alt="IMG_0110.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/14/5ad15c9e09d58.jpg" alt="IMG_0110.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/04/14/5ad15c9b92131.jpg" alt="IMG_0109.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/14/5ad15c9b92131.jpg" alt="IMG_0109.jpg"></p>
 
 <p>总之我觉得还是挺值得的。</p>
 
@@ -241,9 +309,9 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 
 <p>买了个苹果自家的，mophie的莫名其妙冲不进去电。</p>
 
-<p><img src="https://static.reallct.com/2018/10/10/5bbe097eabda9.jpg" alt="IMG_0157.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/10/10/5bbe097eabda9.jpg" alt="IMG_0157.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/10/10/5bbe0981746a4.png" alt="IMG_0038.png" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/10/10/5bbe0981746a4.png" alt="IMG_0038.png"></p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/cong-yi-ge-bei-jia-dian-chi-shuo-qi</guid><pubDate>Sat, 14 Apr 2018 09:44:28 GMT</pubDate></item><item><title>夜行</title><link>https://qwe7002.com/post/ye-xing</link><description><![CDATA[<p>前几天和朋友走了一遍三明的绿道，发现地图和实际路线是不符合的。抱着探索到底的精神，今天我独自从上次结束的位置，导向上山。才发现上次行走的路线是有错的，我们错过了下一段绿道的路口。</p>
 
 <p>不得不说，未知的东西总是那么的神秘，总会让人有所动力去探索它。</p>
@@ -252,26 +320,26 @@ setprop sys.usb.config diag,serial_smd,rmnet_qti_bam,adb
 
 <p>上一点我今天拍的照片吧:</p>
 
-<p><img src="https://static.reallct.com/2018/04/13/5ad0c31e6baa1.jpg" alt="IMG_2300.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/13/5ad0c31e6baa1.jpg" alt="IMG_2300.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/04/13/5ad0c31b15a32.jpg" alt="IMG_2305.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/13/5ad0c31b15a32.jpg" alt="IMG_2305.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/04/13/5ad0c31827679.jpg" alt="IMG_2307.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/13/5ad0c31827679.jpg" alt="IMG_2307.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/04/13/5ad0c31483b36.jpg" alt="IMG_2309.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/13/5ad0c31483b36.jpg" alt="IMG_2309.jpg"></p>
 
-<p><img src="https://static.reallct.com/2018/04/13/5ad0c31138f60.jpg" alt="IMG_2311.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/13/5ad0c31138f60.jpg" alt="IMG_2311.jpg"></p>
 
 <iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/%E5%A5%8F-%E3%81%8B%E3%81%AA%E3%81%A7-feat-%E5%AE%89%E6%9E%9C%E9%9F%B3/1276475334?i=1276475701&app=music" height="150" frameborder="0"></iframe>
-]]></description><guid isPermaLink="true">https://qwe7002.com/post/ye-xing</guid><pubDate>Fri, 13 Apr 2018 22:49:20 GMT</pubDate></item><item><title>感谢JetBrains对SilverBlog的开发支持</title><link>https://qwe7002.com/post/gan-xie-Jetbrains-dui-SilverBlog-de-kai-fa-zhi-chi</link><description><![CDATA[<p>可以说，没有JetBrains提供的Pychram，SilverBlog这个项目的开发周期起码需要翻一倍的时间。</p>
+]]></description><guid isPermaLink="true">https://qwe7002.com/post/ye-xing</guid><pubDate>Fri, 13 Apr 2018 22:49:20 GMT</pubDate></item><item><title>感谢JetBrains对SilverBlog的开发支持</title><link>https://qwe7002.com/post/gan-xie-Jetbrains-dui-SilverBlog-de-kai-fa-zhi-chi</link><description><![CDATA[<p>可以说，没有JetBrains提供的Pycharm，SilverBlog这个项目的开发周期起码需要翻一倍的时间。</p>
 
-<p>在开发期间，我使用了Pychain,idea（Android Studio),Webstorm,App code来进行不同终端不同语言的开发，可以说自动重构，自动补全这些功能是我选择这些庞大的IDE的一个原因。</p>
+<p>在开发期间，我使用了Pycharm,idea（Android Studio),Webstorm,App code来进行不同终端不同语言的开发，可以说自动重构，自动补全这些功能是我选择这些庞大的IDE的一个原因。</p>
 
 <p>前几天去厦门的时候和 Librazy 讨论了一下许可证，Librazy 问我为何不去试试申请一下开源项目的免费许可证呢？于是我就去申请了一份。</p>
 
 <p>总之是非常感谢这份 License 的。</p>
 
-<p><img src="https://static.reallct.com/2018/04/07/5ac7a12751965.png" alt="snipaste_20180407_002627.png" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/04/07/5ac7a12751965.png" alt="snipaste_20180407_002627.png"></p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/gan-xie-Jetbrains-dui-SilverBlog-de-kai-fa-zhi-chi</guid><pubDate>Sat, 07 Apr 2018 00:37:25 GMT</pubDate></item><item><title>自制一个"咕咕机"</title><link>https://qwe7002.com/post/zi-zhi-yi-ge-gu-gu-ji</link><description><![CDATA[<p>看到diygod和tcdw都入手了咕咕机，觉得官方那个太贵了，想着自制一个好了。</p>
 
 <h3>选购一个小票打印机</h3>
@@ -327,7 +395,7 @@ def printmsg(msg):
 <p>但是，当我开始运行它的时候，问题发生了。经过一堆的检查，我发现是ecspos库中，把文本的编码给写死了。所以我把仓库clone了一份，对其中的编码部分进行了修改。终于完成了整个打印机的接口。接下来的工作，大概就是编写web服务器然后科学的调用了。</p>
 
 <p>以下为测试打印:
-<img src="https://static.reallct.com/2018/04/02/5ac2044183038.jpg" alt="IMG_2079.jpg" loading="lazy"></p>
+<img src="https://static.reallct.com/2018/04/02/5ac2044183038.jpg" alt="IMG_2079.jpg"></p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/zi-zhi-yi-ge-gu-gu-ji</guid><pubDate>Wed, 21 Mar 2018 21:28:29 GMT</pubDate></item><item><title>我的第一个IOS应用</title><link>https://qwe7002.com/post/wo-de-di-yi-ge-IOS-ying-yong</link><description><![CDATA[<p>如题所示，这是我从我的第一个 swift 应用，也是 SilverBlog 的 IOS 客户端发出来的一篇文章。</p>
 
 <p>可以说很早之前我就有一个计划，创造一个至少是简单可用的 IOS 客户端给 SilverBlog，然而苦于对苹果生态的不熟悉，一直没有如愿开发出来。</p>
@@ -340,7 +408,7 @@ def printmsg(msg):
 
 <p>总之庆祝一下吧。</p>
 
-<p><img src="https://static.reallct.com/2018/03/19/5aaead30e375c.png" alt="3113CF03-06F2-4925-9E5D-02B7F72B8164.png" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/03/19/5aaead30e375c.png" alt="3113CF03-06F2-4925-9E5D-02B7F72B8164.png"></p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/wo-de-di-yi-ge-IOS-ying-yong</guid><pubDate>Mon, 19 Mar 2018 02:18:09 GMT</pubDate></item><item><title>网易云音乐:从入门到放弃</title><link>https://qwe7002.com/post/wang-yi-yun-yin-le--cong-ru-men-dao-fang-qi</link><description><![CDATA[<p>已经记不得用了多少年网易云音乐了。</p>
 
 <p>第一次用网易云大概是在大一上学期吧，那时候用着iPod touch配合QQ音乐和Itunes听歌（可惜iPod容量不够大，现在来看，如果当时选择的是ipod classic的话，要好不少。不过话说回来，当时并没有非常好的耳机）。还记得那时候QQ音乐的歌曲信息经常不完整，不少歌曲是用soso从其他网站搜索来的。微博上不少人推荐歌曲在用网易云音乐，我也就去试了一下。这一试不要紧，先是被电台功能给吸引了，之后是日推让我每天都能发现好歌，同时相比QQ音乐的信息要整齐的多，也没有发现假无损。于是我就从一个绿钻用户变成了网易云用户。</p>
@@ -1253,8 +1321,8 @@ sudo apt-get install dosbox
 
 <p>咋样？这样就不会出现画面卡顿的现象了吧？什么？！声音断断续续。这个问题其实我也困扰了很久，在经过各种研究之后，终于找到了解决方案：编辑你的文件夹下的<code>/.dosbox/dosbox-x.conf</code>文件，（x代表版本号），把所有的配置中44100替换成22055，再重启游戏，如何？不卡了吧？赶快把灵儿推倒吧！！！！！</p>
 
-<p><img src="https://static.reallct.com/2018/03/24/5ab538e536fa8.jpg" alt="6aed1b0ajw1efmdb6qs9xj218g0xcgry.jpg" loading="lazy">
-<img src="https://static.reallct.com/2018/03/24/5ab538e569664.jpg" alt="6aed1b0ajw1efmdb8rbqcj218g0xc0yp.jpg" loading="lazy"></p>
+<p><img src="https://static.reallct.com/2018/03/24/5ab538e536fa8.jpg" alt="6aed1b0ajw1efmdb6qs9xj218g0xcgry.jpg">
+<img src="https://static.reallct.com/2018/03/24/5ab538e569664.jpg" alt="6aed1b0ajw1efmdb8rbqcj218g0xc0yp.jpg"></p>
 ]]></description><guid isPermaLink="true">https://qwe7002.com/post/ru-he-yong-shu-mei-pai-wan-xian-jian-qi-xia-chuan</guid><pubDate>Tue, 10 Jun 2014 00:00:00 GMT</pubDate></item><item><title>关于我对上大学的理解</title><link>https://qwe7002.com/post/guan-yu-wo-dui-shang-da-xue-de-li-jie</link><description><![CDATA[<p>嘛，明天就要熟悉考场了，不管咋样还是说下现在的想法吧。</p>
 
 <p>高中三年，如何评价呢，三年过的应该来说勉强还算充实。应该说人际关系这东西从高一开始就慢慢开始有所见长。不得不说，初中阶段是人生当中最中二的一个阶段，不过，也就是那时候的敢想敢做才造就了现在的自己吧。</p>

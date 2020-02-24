@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>自制一个"咕咕机"</title>
-    <meta name="description" content="看到diygod和tcdw都入手了咕咕机，觉得官方那个太贵了，想着自制一个好了。 选购一个小票打印机先上了某宝，看了一下小票打印机的价格，发现餐饮用的小票打印机价格便宜的想哭,于是随便选了一个79的，送两打印纸的小票打印机回来了。拿到这个小票打印机，发现一个很严重的问题，就是这个打印机只支持GBK编码（之前做pos打印驱动，都是针对UTF8做开发的，在Python中做GBK开发的经验并不是很多），这算是没有注意看介绍带来的坑把。不过不管了，反正买回来了。">
+    <meta name="description" content="看到diygod和tcdw都入手了咕咕机，觉得官方那个太贵了，想着自制一个好了。   选购一个小票打印机  先上了某宝，看了一下小票打印机的价格，发现餐饮用的小票打印机价格便宜的想哭,于是随便选了一个79的，送两打印纸的小票打印机回来了。  拿到这个小票打印机，发现一个很严重的问题，就是这个打印机只支持GBK编码（之前做pos打印驱动，都是针对UTF-8做开发的，在Python中做GBK开发的经验并不是很多），这算是没有注意看介绍带来的坑把。不过不管了，反正买回来了。">
     <link rel="shortcut icon" href="https://qwe7002.com/static/user_file/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/styles/github.css">
     <link rel="stylesheet" href="/static/casper/css/screen.css">
@@ -22,25 +22,25 @@
 </head>
 <body class="post-template nav-closed">
 <div class="nav">
-    <h3 class="nav-title">菜单</h3>
+    <h3 class="nav-title">Menu</h3>
     <a href="#" class="nav-close">
         <span class="hidden">关闭</span>
     </a>
     <ul>
-        <li><a class="nav-" role="presentation" href="/">首页</a></li><li class="nav-" role="presentation"><a
+        <li><a class="nav-" role="presentation" href="/">Index</a></li><li class="nav-" role="presentation"><a
                     href="/post/about">About Me</a>
             </li><li class="nav-" role="presentation"><a
                     href="/post/links">Links</a>
             </li><li class="nav-" role="presentation"><a
                     href="/post/wo-de-you-xi-list">我的游戏列表</a>
             </li></ul>
-    <a class="subscribe-button icon-feed" href="/rss">订阅</a>
+    <a class="subscribe-button icon-feed" href="/rss">Feed</a>
 </div>
 <span class="nav-cover"></span>
 <div class="site-wrapper">
     <header class="main-header post-head no-cover">
         <nav class="main-nav clearfix">
-            <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         </nav>
     </header>
 
@@ -110,14 +110,14 @@ def printmsg(msg):
 <p>但是，当我开始运行它的时候，问题发生了。经过一堆的检查，我发现是ecspos库中，把文本的编码给写死了。所以我把仓库clone了一份，对其中的编码部分进行了修改。终于完成了整个打印机的接口。接下来的工作，大概就是编写web服务器然后科学的调用了。</p>
 
 <p>以下为测试打印:
-<img src="https://static.reallct.com/2018/04/02/5ac2044183038.jpg" alt="IMG_2079.jpg" lazyload="on"></p>
+<img src="https://static.reallct.com/2018/04/02/5ac2044183038.jpg" lazyload="on"alt="IMG_2079.jpg"></p>
 
             </section>
 
             <footer class="post-footer">
 
                 <figure class="author-image">
-                    <img class="img" src="https://secure.gravatar.com/avatar/829e35ddb6a7ea0f8f172284efab090f">
+                    <img class="img" src="https://secure.gravatar.com/avatar/829e35ddb6a7ea0f8f172284efab090f" alt="author" lazyload="on">
                 </figure>
 
                 <section class="author">
@@ -153,7 +153,7 @@ def printmsg(msg):
     </main>
 
 <footer class="site-footer clearfix">
-    <section class="copyright"><a href="/">qwe7002的个人博客</a> &copy; 2019</section>
+    <section class="copyright"><a href="/">qwe7002的个人博客</a> &copy; 2020</section>
     <section class="poweredby">Powered by <a href="https://silverblog.org">SilverBlog</a> , Theme By Casper</section>
     
 </footer>

@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>目前我的工作环境</title>
-    <meta name="description" content="目前的工作设备  目前我常用的工作设备有五台，分别是：   Macbook Air（2014）  Dell笔记本（i5-5200U，8G，128Gssd）（开发环境）  HP 笔记本（编译/调试）  Surface Pro2  一加手机 1  OS  目前用的比较多的是 Windows10 以及 OS X Yosemite。个人比较喜欢各施其职（精致生活），Windows 主要写 Client 用，而一般开发php等等东西会用OS X。服务器系统 Ubuntu14.04 ，不为什么，省事。移动办公主要用的是一加1，它可以很方便的联接到4G网络并且管理Git仓库">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>折腾国行Sony WI-1000x刷机</title>
+    <meta name="description" content="原来的EX750BT由于时间问题，已经出现电池续航不足的问题了。乘着618耍猴，以定金100，1299尾款的价格（据说历史最低价只有1299，不过想了一下反正我也买不到，算了)买了一个Wi-1000X。  在618当天，我支付尾款后的下午，耳机就送到了。可以说这个预购的体验还算不错，至少我不用饱受618这样活动的快递问题。">
     <link rel="shortcut icon" href="https://qwe7002.com/static/user_file/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/styles/github.css">
     <link rel="stylesheet" href="/static/casper/css/screen.css">
@@ -48,50 +48,64 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">目前我的工作环境</h1>
+                <h1 class="post-title">折腾国行Sony WI-1000x刷机</h1>
                 <section class="post-meta">
-                    <time class="post-date" datetime="2015-10-02">2015-10-02</time>
+                    <time class="post-date" datetime="2019-06-21">2019-06-21</time>
                 </section>
             </header>
 
             <section class="post-content">
-                <h3>目前的工作设备</h3>
+                <p>原来的EX750BT由于时间问题，已经出现电池续航不足的问题了。乘着618耍猴，以定金100，1299尾款的价格（据说历史最低价只有1299，不过想了一下反正我也买不到，算了)买了一个Wi-1000X。</p>
 
-<p>目前我常用的工作设备有五台，分别是：</p>
+<p>在618当天，我支付尾款后的下午，耳机就送到了。可以说这个预购的体验还算不错，至少我不用饱受618这样活动的快递问题。</p>
 
-<ul>
-<li>Macbook Air（2014）</li>
-<li>Dell笔记本（i5-5200U，8G，128Gssd）（开发环境）</li>
-<li>HP 笔记本（编译/调试）</li>
-<li>Surface Pro2</li>
-<li>一加手机 1</li>
-</ul>
+<p><img src="https://static.reallct.com/2019/06/21/5d0cb9f53713232905.jpeg" lazyload="on"></p>
 
-<h3>OS</h3>
+<p><img src="https://static.reallct.com/2019/06/21/5d0cb9fb56ebc50209.jpeg" lazyload="on"></p>
 
-<p>目前用的比较多的是 Windows10 以及 OS X Yosemite。个人比较喜欢各施其职（精致生活），Windows 主要写 Client 用，而一般开发php等等东西会用OS X。服务器系统 Ubuntu14.04 ，不为什么，省事。移动办公主要用的是一加1，它可以很方便的联接到4G网络并且管理Git仓库</p>
+<p>整个机子的质感给我一种还不错的感觉，直到我带上它，按了一下开机键……</p>
 
-<h3>仓库管理</h3>
+<p>Emmmmmm 这个中文语音提示，怎么感觉和华强北60元的那种蓝牙音箱的差不多……而且内置的这个腾讯小薇是什么鬼……我怎么记得是Google Assitant……我这个手机用的是英国区的账户啊……为啥我之前的Ex750BT就是英文的呢……</p>
 
-<p>在仓库管理上，目前我只采用两款软件，分别是在Windows/Mac上的Sourcetree和在Android上的PocketGit。这两个软件可以非常方便快捷的管理仓库的变更。</p>
+<p><img src="https://static.reallct.com/2019/06/21/5d0cba008062c27148.jpeg" lazyload="on"></p>
 
-<h3>shell</h3>
+<p>经过一通查找，在网上发现了原因，是因为国行的固件和国际版的固件不同。但我们直到wi-1000x这个耳机应该是硬件一致，唯一的区别就是固件不同。于是我就在网上找有没有什么能够通过强刷固件的方法来实现国际版固件。</p>
 
-<p>bash。至于为什么不用其他，一句话，懒得折腾</p>
+<p>功夫不负有心人，在<a href="https://blog.lvwind.com/upgrade-sony-wi-1000x-china-ver/">LvWind Blog</a>找到了一个解决方法，于是我拿出我开发用的Pixel进行安装……然而
+<img src="https://static.reallct.com/2019/06/21/5d0cb9f98270647749.jpeg" lazyload="on"></p>
 
-<h3>编辑器</h3>
+<p>看起来应该是我的耳机出厂固件太新了，这个老版本的客户端已经不适用了。于是再次寻找。最后通过Google的快照功能找到了一个能用的版本。<a href="http://webcache.googleusercontent.com/search?q=cache:VqbGuMxtUKIJ:dq.tieba.com/p/6043650116+&amp;cd=2&amp;hl=en">理论上可以强刷所有耳机固件的Sony Headphone Connect</a></p>
 
-<p>Linux下一直用的是 Nano ，这个编辑器在 Shell 下应该感觉是最简单的编辑器了，几乎没有什么生涩的命令以及各种奇怪的快捷键。</p>
+<p>原文:</p>
 
-<p>Windows和Mac下用的是 Sublime，这个编辑器虽然褒贬不一，但是个人还是挺习惯的。</p>
+<pre><code>
+之前发过一次 WI-1000X强制升级固件的
 
-<p>Android下用的则是Quoda这款编辑器，这款编辑器在Android下操作体验还是不错的。</p>
+http://tieba.baidu.com/p/5845777671
+前几天国行更新了, 所以终于有办法刷回国行固件
 
-<p>IDE 几乎只是在写 CSharp 的时候用一下， Visual Studio 2010 Express 对于一般开发而言就够了，根本用不着装个旗舰版填满本来就不大的ssd。后来因为老赖的安利最后还是用上了2015。个人觉得如果要综合开发的话，2015的确有更多的优势。</p>
+至于风险原帖已经写的很明白了
 
-<h3>编程语言</h3>
+本人不对因使用此软件造成的任何损失负责, 使用前请确保为正品行货, 做好需要保修的心理准备
 
-<p>一般网页会用 php 来编写，一旦涉及到系统命令操作的或者需要读取大量文件的程序则采用 Python 。针对用户桌面应用的则使用 C# 来完成。不过有时候也会让他们不务正业做一些事情。</p>
+链接: https://pan.baidu.com/s/1exABeJEVhbz4qc24CkSPcg 提取码: sony
+
+其中mdr_0.apk为强制修改serviceID最后一位为0(国际版), mdr_1.apk为1(日本版), mdr_2.apk为2(国行版)
+
+所有apk均为强制更新, 也就是即使更新完再次打开也会提示更新, 所以强刷后请卸载重新安装官方版本
+
+PS: 有人保留了旧版固件的话请联系我, 目前有兴趣研究强刷旧版固件
+
+</code></pre>
+
+<p><img src="https://static.reallct.com/2019/06/21/5d0cb9fe1b01581974.jpeg" lazyload="on"></p>
+
+<p>强刷之后，熟悉的英语提示回来了，极度舒适，同时检查了一下，没有任何功能问题。非常开心。
+<img src="https://static.reallct.com/2019/06/21/5d0cb9fc5420737546.jpeg" lazyload="on"></p>
+
+<p>也可以用Google Assitant了，非常感谢这位<code>lzbdzr</code>提供的工具。</p>
+
+<iframe src="https://open.spotify.com/embed/track/6538a9sxH1VD2g7kJzo7bd" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
             </section>
 
